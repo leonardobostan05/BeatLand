@@ -18,6 +18,8 @@ public class Beat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long beatId;
 
+    private boolean isAvailable = true;
+
     private String beatname;
     private String description;
     private String genre;
@@ -100,5 +102,11 @@ public class Beat {
         return beatId;
     }
 
+    public boolean isAvailable() {
+        return isAvailable;
+    }
 
+    public void setAvailable(boolean available) {
+        isAvailable = available;
+    }
 }
