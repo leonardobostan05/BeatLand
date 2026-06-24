@@ -38,6 +38,9 @@ public class PurchaseService {
         purchase.setLicenseTemplate(license);
         purchase.setTransactionDate(LocalDateTime.now());
 
+        if(!beat.isAvailable()){
+            throw new RuntimeException("Beat ist nicht mehr verfügbar.");
+        }
 
         if(license.isExclusive()){
             beat.setAvailable(false);
