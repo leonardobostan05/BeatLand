@@ -19,6 +19,7 @@ public class Purchase {
     private LocalDateTime transactionDate;
     private double totalPrice;
 
+    // Kardinalität der Relationen
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User buyer;

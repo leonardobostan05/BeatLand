@@ -10,6 +10,9 @@ import java.time.LocalDateTime;
 
 public class User {
 
+    // Rollen, welche ein User einnehmen kann
+    // (Produzent, Käufer, oder auch beides: denn beide können theoretisch beides tuhen)
+
     public enum Role {
 
         PRODUCER,

@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 
 public class LicenseTemplate {
 
+    // Folgende Lizenztypen gibt es zur Verfügung
     public enum LicenseType{
         MP3,
         WAV,
@@ -27,6 +28,8 @@ public class LicenseTemplate {
 
     private String licenseDescription;
     private int licensePrice;
+
+    //Exclusive Lizenz, welche ein Beat beim Kauf von dem Marketplace runternimmt
     private boolean isExclusive;
 
     //Getter & Setter Methoden

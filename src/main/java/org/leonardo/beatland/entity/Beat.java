@@ -18,6 +18,7 @@ public class Beat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long beatId;
 
+    // boolean um zu prüfen, ob ein Beat verkauft wurde für die Exclusive-License Logik
     private boolean isAvailable = true;
 
     private String beatname;
@@ -26,6 +27,7 @@ public class Beat {
     private String mood;
     private String key;
 
+    //Extra Datenbank für die Tags: es können maximal 3 vorkommen
     @ElementCollection
     private List<String> tags = new ArrayList<>();
 
