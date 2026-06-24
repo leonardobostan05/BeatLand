@@ -10,11 +10,22 @@ import java.time.LocalDateTime;
 
 public class User {
 
+    public enum Role {
+
+        PRODUCER,
+        BUYER,
+        BOTH
+
+    }
+
     public User() {}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     private String username;
     private String email;
@@ -23,10 +34,6 @@ public class User {
 
 
     //Getter & Setter Methoden
-
-    public Long getId(){
-        return userId;
-    }
 
     public String getUsername(){
         return username;
@@ -60,4 +67,15 @@ public class User {
         this.createdAt = createdAt;
     }
 
+    public Long getUserId() {
+        return userId;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 }
