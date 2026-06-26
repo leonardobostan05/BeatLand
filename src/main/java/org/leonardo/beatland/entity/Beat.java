@@ -21,6 +21,15 @@ public class Beat {
     // boolean um zu prüfen, ob ein Beat verkauft wurde für die Exclusive-License Logik
     private boolean isAvailable = true;
 
+    // File Upload ----------------------
+
+    private String mp3Path;
+    private String wavPath;
+    private String stemsPath;
+
+    // ----------------------------------
+
+    // Metadaten -------------
     private String beatname;
     private String description;
     private String genre;
@@ -33,6 +42,8 @@ public class Beat {
 
     private int bpm;
     private LocalDateTime uploadedAt;
+
+    // -------------------
 
     //Getter & Setter Methoden
 
@@ -102,6 +113,30 @@ public class Beat {
 
     public Long getBeatId() {
         return beatId;
+    }
+
+    public String getMp3Path() {
+        return mp3Path;
+    }
+
+    public void setMp3Path(String mp3Path) {
+        this.mp3Path = mp3Path;
+    }
+
+    public String getWavPath() {
+        return wavPath;
+    }
+
+    public void setWavPath(String wavPath) {
+        this.wavPath = wavPath;
+    }
+
+    public String getStemsPath() {
+        return stemsPath;
+    }
+
+    public void setStemsPath(String stemsPath) {
+        this.stemsPath = stemsPath;
     }
 
     public boolean isAvailable() {
