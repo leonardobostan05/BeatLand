@@ -14,7 +14,8 @@ to do it myself, I decided to give it a try and create a marketplace prototype.
 ## Features
 
 - Create a User with personal information (username, email, password)
-- Upload beats with metadata (BPM, key, genre, mood, tags)
+- Create beats with metadata (BPM, key, genre, mood, tags)
+- Upload real MP3/WAV/stems files directly to the server
 - Create reusable license templates (MP3, WAV, STEMS, EXCLUSIVE)
 - Perform purchases with automatic availability management
 
@@ -34,20 +35,21 @@ This project follows a layered architecture:
 
 ## API Endpoints
 
-| Method | Endpoint         | Description                        |
-|--------|------------------|------------------------------------|
-| GET    | /users           | Get all users                      |
-| POST   | /users           | Create a new user                  |
-| DELETE | /users/{id}      | Delete a user by ID                |
-| GET    | /beats           | Get all beats                      |
-| POST   | /beats           | Upload a new beat                  |
-| DELETE | /beats/{id}      | Delete a beat by ID                |
-| GET    | /licenses        | Get all license templates          |
-| POST   | /licenses        | Create a new license template      |
-| DELETE | /licenses/{id}   | Delete a license template by ID    |
-| GET    | /purchases       | Get all purchases                  |
-| POST   | /purchases       | Create a new purchase              |
-| DELETE | /purchases/{id}  | Delete a purchase by ID            |
+| Method | Endpoint            | Description                             |
+|--------|---------------------|-----------------------------------------|
+| GET    | /users              | Get all users                           |
+| POST   | /users              | Create a new user                       |
+| DELETE | /users/{id}         | Delete a user by ID                     |
+| GET    | /beats              | Get all beats                           |
+| POST   | /beats              | Upload a new beat                       |
+| DELETE | /beats/{id}         | Delete a beat by ID                     |
+| GET    | /licenses           | Get all license templates               |
+| POST   | /licenses           | Create a new license template           |
+| DELETE | /licenses/{id}      | Delete a license template by ID         |
+| GET    | /purchases          | Get all purchases                       |
+| POST   | /purchases          | Create a new purchase                   |
+| DELETE | /purchases/{id}     | Delete a purchase by ID                 |
+| POST   | /beats/{id}/upload  | Upload an audio file (MP3, WAV, stems)  |
 
 ## Data Model
 
@@ -82,7 +84,6 @@ actually exist in the database, preventing invalid transactions.
 
 ## Limitations & Next Steps
 
-- be able to upload real mp3/wav. files
 - add collaborators to a single beat with percentage splits
 - manage and sell stems separately
 - offer free downloads with producer tag protection
@@ -91,4 +92,5 @@ actually exist in the database, preventing invalid transactions.
 
 ## Status
 
-✅ MVP Complete — v1.0.0
+✅ MVP Complete — v1.0.0                    [24th June 2026]
+✅ v1.1.0 — File Upload (MP3, WAV, Stems)   [26th June 2026]
